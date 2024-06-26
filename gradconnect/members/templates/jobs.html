@@ -1,0 +1,29 @@
+{% extends "master.html" %}
+
+{% block title %}
+My Job Listings - List of All Jobs/Internships
+{% endblock %}
+
+{% block content %}
+<div class="content">
+    <h1>Jobs/Internships</h1>
+    
+    <!-- Search Form -->
+    <form method="GET" action="">
+        {{ form.query.label_tag }}
+        {{ form.query }}
+        <button type="submit">Search</button>
+    </form>
+    
+    <ul class="job-list">
+        {% for job in jobs %}
+        <li class="job-item">
+            <span>{{ job.jobtitle }} | {{ job.company }}</span>
+            <button class="btn-view-details" onclick="window.location.href='{% url 'details' job.id %}'">View Details</button>
+            <button class="btn-view-details" onclick="window.location.href='{% url 'details' job.id %}'">Apply</button>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
+

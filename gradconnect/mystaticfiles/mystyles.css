@@ -1,0 +1,325 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    color: #000;
+}
+
+/* Header */
+#banner {
+    background-color: #2a2a2b;
+    color: #eff1eb;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+#banner span {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.topnav {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #6747db;
+    overflow: hidden;
+}
+
+.topnav a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Content */
+.content {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.profile-container, .edit-profile-container {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.profile-details {
+    margin-top: 20px;
+}
+
+.profile-details img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.edit-profile-container form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.edit-profile-container form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.edit-profile-container form input[type="text"],
+.edit-profile-container form input[type="email"],
+.edit-profile-container form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.edit-profile-container form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.edit-profile-container form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.edit-profile-container form button:hover {
+    background-color: #45a049;
+}
+
+/* Mentors page styles */
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul li strong {
+    font-size: 1.2em;
+}
+
+ul li a.btn {
+    padding: 5px 10px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+ul li a.btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+ul li a.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+ul li a.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+ul li a.btn-primary:hover {
+    background-color: #0069d9;
+}
+
+/* Highlight link styles */
+.highlight-link {
+    color: #007bff; /* Change this to your desired color */
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid #007bff; /* Adds an underline with the same color */
+    padding-bottom: 2px;
+}
+
+.highlight-link:hover {
+    color: #0056b3; /* Darker shade for hover effect */
+    border-bottom: 2px solid #0056b3;
+}
+
+/* Job Listings styles */
+.job-list {
+    list-style: none;
+    padding: 0;
+}
+
+.job-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.job-item:hover {
+    background-color: #f1f1f1;
+}
+
+.btn-view-details {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-view-details:hover {
+    background-color: #0056b3;
+}
+
+
+  
+/* mystyles.css for logout*/
+
+.logout-container {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    max-width: 600px;
+    text-align: center;
+}
+
+.logout-container h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.logout-container p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.logout-container a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.logout-container a:hover {
+    text-decoration: underline;
+}
+
+/* Edit Profile Form */
+.profile-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #fff;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.profile-form input[type="text"],
+.profile-form input[type="email"],
+.profile-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.profile-form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.profile-form button:hover {
+    background-color: #45a049;
+}
+
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #7c7d80;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

@@ -1,0 +1,18 @@
+<!-- templates/mentor_details.html -->
+
+{% extends 'master.html' %}
+{% block title %}Mentor Details - GradConnect{% endblock %}
+
+{% block content %}
+
+    <h1>{{ mentor.name }}</h1>
+    <p><strong>Expertise:</strong> {{ mentor.expertise }}</p>
+    <p><strong>Contact Info:</strong> {{ mentor.contact_info }}</p>
+    {% if mentor.bio %}
+        <p><strong>Bio:</strong> {{ mentor.bio }}</p>
+    {% endif %}
+    {% if mentor.profile_pic %}
+        <img src="{{ mentor.profile_pic.url }}" alt="Profile Picture">
+    {% endif %}
+
+{% endblock %}

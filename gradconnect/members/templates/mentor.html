@@ -1,0 +1,19 @@
+<!-- templates/mentor.html -->
+
+{% extends 'master.html' %}
+{% block title %}Mentors - GradConnect{% endblock %}
+
+{% block content %}
+    <h1>Mentors</h1>
+    <h3>Available Mentors</h3>
+    <ul>
+        {% for mentor in mentors %}
+            <li>
+                <strong>{{ mentor.name }}</strong> - {{ mentor.expertise }}
+                <a href="{% url 'mentor_details' mentor.id %}" class="btn btn-secondary btn-sm btn-details">Details</a> |
+                <a href="{% url 'connect_mentor' mentor.id %}" class="btn btn-primary btn-sm btn-connect">Connect</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+

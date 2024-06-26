@@ -1,0 +1,17 @@
+{% extends "master.html" %}
+
+{% block tiitle %}
+Details about {{ jobs.jobtitle }}
+{% endblock %}
+
+{% block content %}
+<div class="mycard">
+        <h1>{{ jobs.jobtitle }}</h1>
+        <h3>{{ jobs.company }}</h3>
+        <p>location: {{ jobs.location }}</p>
+        <p>email: {{ jobs.email }}</p>
+        <p>date published: {{ jobs.published_date}}</p>
+
+</div>
+<a href="members/" class="highlight-link">back</a>
+{% endblock %}
