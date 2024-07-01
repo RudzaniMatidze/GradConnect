@@ -1,14 +1,16 @@
 {% extends "master.html" %}
 
 {% block content %}
-<h1>Profile Details</h1>
+<div class="profile-container">
+    <h1>Profile Details</h1>
 
-<p><strong>Name:</strong> {{ profile.name }}</p>
-<p><strong>Email:</strong> {{ profile.email }}</p>
-<p><strong>Qualifications:</strong> {{ profile.qualifications }}</p>
-<p><strong>Bio:</strong> {{ profile.bio }}</p>
-<p><strong>Skills:</strong> {{ profile.skills }}</p>
+    <p><strong>Name:</strong> {{ profile.name }}</p>
+    <p><strong>Email:</strong> {{ profile.email }}</p>
+    <p><strong>Qualifications:</strong> {{ profile.qualifications }}</p>
+    <p><strong>Bio:</strong> {{ profile.bio }}</p>
+    <p><strong>Skills:</strong> {{ profile.skills }}</p>
 
-<p><a href="edit/">Edit Profile</a></p>
+    <p class="space-above"><a href="edit/" class="edit-link">Edit Profile</a></p>
+</div>
 {% endblock %}
 

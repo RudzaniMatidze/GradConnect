@@ -76,6 +76,7 @@ a:hover {
     border-radius: 4px;
 }
 
+/* profile and edit_profile */
 .profile-container, .edit-profile-container {
     background-color: #fff;
     padding: 20px;
@@ -134,12 +135,26 @@ a:hover {
     background-color: #45a049;
 }
 
+.space-above {
+    margin-top: 20px; /* Adjust the value as needed */
+}
+
+.edit-link {
+    color: #ff0000; /* Change to the desired color */
+    text-decoration: none; /* Optional: remove underline */
+}
+
+.edit-link:hover {
+    color: #cc0000; /* Optional: change color on hover */
+}
+
+
 /* Mentors page styles */
 h1 {
     font-size: 2em;
     margin-bottom: 20px;
     color: #333;
-    text-align: center;
+    text-align: left
 }
 
 ul {
@@ -243,10 +258,40 @@ ul li a.btn-primary:hover {
     background-color: #0056b3;
 }
 
+/* Application Progress styles */
+.application-progress {
+    background-color: #e9ecef;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
 
-  
+.application-progress h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #343a40;
+}
+
+.application-progress ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.application-progress ul li {
+    padding: 5px 10px;
+    font-size: 1em;
+    color: #192b3d;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+ 
 /* mystyles.css for logout*/
-
 .logout-container {
     background-color: #fff;
     padding: 20px;
@@ -323,3 +368,55 @@ ul li a.btn-primary:hover {
     bottom: 0;
     width: 100%;
 }
+
+/* Success message styles */
+.success {
+    color: green;
+    margin-bottom: 15px;
+}
+
+/* Error message styles */
+.error {
+    color: red;
+    margin-bottom: 15px;
+}
+
+
+    /* Home Page styles */
+    .main {
+        display: flex;
+        align-items: center; /* Vertical center alignment */
+    }
+
+    .left-content {
+        flex: 1; /* Takes up 50% of the width */
+        padding-right: 20px; /* Adjust as needed for spacing */
+    }
+
+    .right-content {
+        flex: 1; /* Takes up 50% of the width */
+        padding-left: 20px; /* Adjust as needed for spacing */
+    }
+
+    .right-content p,
+    .right-content h3,
+    .right-content a {
+        /* Example styles for right content */
+        color: #333;
+        /* Add more styles as needed */
+    }
+
+    .right-content h1 {
+        font-size: 28px; /* Example font size */
+        font-weight: bold; /* Example font weight */
+        color: #000; /* Example color */
+        margin-bottom: 10px; /* Example margin bottom */
+    }
+
+    .left-content img {
+        max-width: 100%; /* Ensure image doesn't exceed container width */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Remove any inline spacing */
+    }
+
+

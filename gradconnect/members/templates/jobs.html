@@ -8,6 +8,20 @@ My Job Listings - List of All Jobs/Internships
 <div class="content">
     <h1>Jobs/Internships</h1>
     
+    <!-- Application Progress -->
+    {% if application_progress %}
+    <div class="application-progress">
+        <h2>Application Progress For This Month</h2>
+        <ul>
+            <li>Total Applied: {{ application_progress.total_applied }}</li>
+            <li>Interviews: {{ application_progress.interview }}</li>
+            <li>Reviews: {{ application_progress.review }}</li>
+            <li>Rejected: {{ application_progress.rejected }}</li>
+            <li>Accepted: {{ application_progress.accepted }}</li>
+        </ul>
+    </div>
+    {% endif %}
+
     <!-- Search Form -->
     <form method="GET" action="">
         {{ form.query.label_tag }}

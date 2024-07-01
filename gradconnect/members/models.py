@@ -1,4 +1,7 @@
 from django.db import models
+
+# Create your models here.
+from django.db import models
 from django.core.validators import EmailValidator
 from django.contrib.auth.models import User
 
@@ -9,6 +12,7 @@ class Member(models.Model):
     location = models.CharField(max_length=255, default="Unknown")
     email = models.EmailField(null=True)
     published_date = models.DateField(null=True)
+    job_description = models.TextField(null=True, blank=True)
 
 def __str__(self):
     return f"{self.jobtitle} {self.location}"
@@ -39,3 +43,20 @@ class Mentor(models.Model):
 
     def __str__(self):
         return self.name
+    
+class Application(models.Model):
+    STATUS_CHOICES = [
+        ('applied', 'Applied'),
+        ('interview', 'Interview'),
+        ('review', 'Review'),
+        ('rejected', 'Rejected'),
+        ('accepted', 'Accepted'),
+    ]
+    
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    job = models.ForeignKey(Member, on_delete=models.CASCADE)
+    status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='applied')
+    date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.user.username} - {self.job.jobtitle}"

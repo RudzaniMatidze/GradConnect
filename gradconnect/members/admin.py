@@ -3,7 +3,7 @@ from .models import Member, Profile, Mentor
 
 @admin.register(Member)
 class MemberAdmin(admin.ModelAdmin):
-    list_display = ("jobtitle", "company", "location", "published_date",)
+    list_display = ("jobtitle", "company", "location", "published_date", "job_description")
 
 @admin.register(Profile)
 class ProfileAdmin(admin.ModelAdmin):
