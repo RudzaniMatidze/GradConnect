@@ -59,23 +59,23 @@ Gradconnect is a Django-based web application designed to connect graduates with
 
 ## Project Structure
 gradconnect/
-├── gradconnect/ # Project configuration files
-│ ├── init.py
-│ ├── settings.py # Settings for the project
-│ ├── urls.py # URL routing
-│ └── wsgi.py # WSGI entry point for deployment
-├── app/ # Main application code
-│ ├── migrations/ # Database migrations
-│ ├── static/ # Static files (CSS, JavaScript, Images)
-│ ├── templates/ # HTML templates
-│ ├── init.py
-│ ├── admin.py # Admin configuration
-│ ├── apps.py # Application configuration
-│ ├── models.py # Data models
-│ ├── tests.py # Unit tests
-│ └── views.py # View functions
-├── manage.py # Command-line utility for running and managing the project
-└── requirements.txt # Python package dependencies
+   gradconnect/ # Project configuration files
+      init.py
+      settings.py # Settings for the project
+      urls.py # URL routing
+      wsgi.py # WSGI entry point for deployment
+   app/ # Main application code
+      migrations/ # Database migrations
+      static/ # Static files (CSS, JavaScript, Images)
+      templates/ # HTML templates
+      init.py
+      admin.py # Admin configuration
+      apps.py # Application configuration
+      models.py # Data models
+      tests.py # Unit tests
+      views.py # View functions
+   manage.py # Command-line utility for running and managing the project
+   requirements.txt # Python package dependencies
 
 ## Usage
 - User Registration
