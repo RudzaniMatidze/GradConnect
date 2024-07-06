@@ -13,8 +13,9 @@ Gradconnect is a Django-based web application designed to connect graduates with
 - [License](#license)
 
 ## Collaborators
-- Rudzani Matidze
-- Thomas Manhica
+- Rudzani Matidze - [Github](https://github.com/RudzaniMatidze)
+- Thomas Manhica - [Github](https://github.com/ManhicaThomas)
+
 ## Features
 - User authentication and profile management
 - Mentor-mentee matching system
@@ -27,6 +28,54 @@ Gradconnect is a Django-based web application designed to connect graduates with
 - Django 3.x or later
 - SQLite (default) or other preferred database
 - Virtualenv (recommended)
+
+## Installation
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/RudzaniMatidze/GradConnect.git
+    cd gradconnect
+    ```
+2. Create and activate a virtual environment:
+    ```sh
+    python3 -m venv env
+    source env/bin/activate  # On Windows use `env\Scripts\activate`
+    ```
+3. Install the required packages:
+    ```sh
+    pip install -r requirements.txt
+    ```
+4. Apply migrations:
+    ```sh
+    python manage.py migrate
+    ```
+5. Create a superuser:
+    ```sh
+    python manage.py createsuperuser
+    ```
+6. Run the development server:
+    ```sh
+    python manage.py runserver
+    ```
+
+## Project Structure
+gradconnect/
+├── gradconnect/ # Project configuration files
+│ ├── init.py
+│ ├── settings.py # Settings for the project
+│ ├── urls.py # URL routing
+│ └── wsgi.py # WSGI entry point for deployment
+├── app/ # Main application code
+│ ├── migrations/ # Database migrations
+│ ├── static/ # Static files (CSS, JavaScript, Images)
+│ ├── templates/ # HTML templates
+│ ├── init.py
+│ ├── admin.py # Admin configuration
+│ ├── apps.py # Application configuration
+│ ├── models.py # Data models
+│ ├── tests.py # Unit tests
+│ └── views.py # View functions
+├── manage.py # Command-line utility for running and managing the project
+└── requirements.txt # Python package dependencies
 
 ## Usage
 - User Registration
