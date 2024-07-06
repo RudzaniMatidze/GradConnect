@@ -1,5 +1,5 @@
 # Gradconnect
-
+![GradConnnect home page](images/home.png)
 Gradconnect is a Django-based web application designed to connect graduates with mentors, job opportunities, and networking events. This project aims to provide a platform for graduates to build professional relationships and advance their careers.
 
 ## Table of Contents
