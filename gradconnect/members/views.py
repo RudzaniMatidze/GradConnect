@@ -3,10 +3,9 @@ from django.template import loader
 from .models import Member, Profile, Mentor, Application
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404, redirect, render
-from django.contrib.auth import logout
-from .forms import ProfileForm
+from .forms import ProfileForm, SignUpForm
 from django.contrib.auth.forms import AuthenticationForm
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import logout, login, authenticate
 from django.contrib import messages
 from datetime import datetime
 
@@ -49,26 +48,26 @@ def home(request):
     return HttpResponse(template.render())
 
 
+@login_required
 def profile(request):
     profile = Profile.objects.get(user=request.user)
     return render(request, 'profile.html', {'profile': profile})
 
-
+@login_required
 def edit_profile(request):
     profile = Profile.objects.get(user=request.user)
     if request.method == 'POST':
-        user_profile = request.user.profile
         form = ProfileForm(request.POST, request.FILES, instance=profile)
         if form.is_valid():
             form.save()
             messages.success(request, 'Your profile has been updated successfully.')
             return redirect('profile')
     else:
-        user_profile = request.user.profile
         form = ProfileForm(instance=profile)
 
     context = {'form': form}
-    return render(request, 'edit_profile.html', {'form': form})
+    return render(request, 'edit_profile.html', context)
+
 
 def mentor_list(request):
     mentors = Mentor.objects.all()
@@ -86,10 +85,12 @@ def connect_mentor(request, id):
     # Redirect back to the mentors list after connecting
     return redirect('mentor_list')
 
+# Logout view
 def logout_view(request):
     logout(request)
     return render(request, 'logout.html')
 
+# Login view
 def login_view(request):
     if request.method == "POST":
         form = AuthenticationForm(request, data=request.POST)
@@ -104,5 +105,30 @@ def login_view(request):
         form = AuthenticationForm()
     return render(request, 'login.html', {'form': form})
 
+# Sign-up view
+def signup_view(request):
+    if request.method == 'POST':
+        form = SignUpForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)  # Log the user in after registration
+            return redirect('create_profile')  # Redirect to profile creation page
+    else:
+        form = SignUpForm()
+    return render(request, 'signup.html', {'form': form})
+
+@login_required
+def create_profile(request):
+    if request.method == 'POST':
+        form = ProfileForm(request.POST, request.FILES)
+        if form.is_valid():
+            profile = form.save(commit=False)
+            profile.user = request.user
+            profile.save()
+            return redirect('profile')  # Redirect to the user's profile page
+    else:
+        form = ProfileForm()
+    return render(request, 'create_profile.html', {'form': form})
+
 def home_view(request):
-    return render(request, 'main.html')
+    return render(request, 'home.html')

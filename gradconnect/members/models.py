@@ -4,6 +4,7 @@ from django.db import models
 from django.db import models
 from django.core.validators import EmailValidator
 from django.contrib.auth.models import User
+from django.apps import AppConfig
 
 # Create your models here.
 class Member(models.Model):
@@ -31,7 +32,7 @@ class Profile(models.Model):
     profile_link = models.URLField(max_length=255, blank=True, null=True, verbose_name="Profile Link")
 
     def __str__(self):
-        return self.name
+        return f'{self.user.username} Profile'
 
 class Mentor(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, null=True, blank=True)
@@ -60,3 +61,9 @@ class Application(models.Model):
 
     def __str__(self):
         return f"{self.user.username} - {self.job.jobtitle}"
+    
+class YourAppConfig(AppConfig):
+    name = 'members'
+
+    def ready(self):
+        import members.signals

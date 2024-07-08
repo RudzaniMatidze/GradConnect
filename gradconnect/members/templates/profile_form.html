@@ -1,0 +1,29 @@
+{% extends "master.html" %}
+
+{% block content %}
+<form class="profile-form" action="{% url 'edit_profile' %}" method="POST">
+    {% csrf_token %}
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" value="{{ profile.name }}" required>
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" value="{{ profile.email }}" required>
+
+    <label for="qualifications">Qualifications:</label>
+    <textarea id="qualifications" name="qualifications" rows="4" required>{{ profile.qualifications }}</textarea>
+
+    <label for="bio">Bio:</label>
+    <textarea id="bio" name="bio" rows="4" required>{{ profile.bio }}</textarea>
+
+    <label for="skills">Skills:</label>
+    <textarea id="skills" name="skills" rows="4" required>{{ profile.skills }}</textarea>
+
+    <label for="portfolio_link">Portfolio Link:</label>
+    <input type="text" id="portfolio_link" name="portfolio_link" value="{{ profile.portfolio_link }}">
+
+    <label for="profile_link">Profile Link:</label>
+    <input type="text" id="profile_link" name="profile_link" value="{{ profile.profile_link }}">
+
+    <button type="submit">Save Changes</button>
+</form>
+{% endblock %}
