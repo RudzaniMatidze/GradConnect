@@ -30,7 +30,8 @@ In the future, we envision adding more advanced features such as real-time chat 
 - [License](#license)
 
 ## Project Deployment
-- Visit [GradConnect](https://rudzee.pythonanywhere.com/accounts/login/)
+- Visit [GradConnect website](https://rudzee.pythonanywhere.com/accounts/login/)
+- visit [landing page](https://rudzanimatidze.github.io/grad_connect)
 
 ## Collaborators
 - Rudzani Matidze - [Github](https://github.com/RudzaniMatidze) | [Project Blog](https://medium.com/@rdzmatidze/working-on-gradconnect-my-first-portfolio-project-09248b79a37a ) | [LinkedIn](https://za.linkedin.com/in/rudzani-matidze-b78431150)
