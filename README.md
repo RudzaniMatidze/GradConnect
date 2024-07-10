@@ -1,8 +1,20 @@
-# Gradconnect
+# 🎓Gradconnect
 ![GradConnnect home page](images/home.png)
 
 ## Introduction
 Gradconnect is a Django-based web application designed to connect graduates with mentors, job opportunities, and networking events. This project aims to provide a platform for graduates to build professional relationships and advance their careers.
+
+### Inspiration
+The inspiration for this project came from the high unemployment rate among South African graduates, we witnessed the struggle to find relevant employment. Many graduates, lacking guidance on job search strategies and industry knowledge, end up accepting any available position. This lack of experience further hinders their pursuit of their dream careers. Recognizing this frustration, we developed a job search website. This platform connects graduates with experienced mentors who can provide guidance, share industry insights, and ultimately, empower them to land their desired jobs.
+
+### Technical Challenges
+Building Gradconnect presented several technical challenges. One of the main challenges was implementing the mentor-mentee matching algorithm. I chose to use a weighted scoring system that considers various factors such as interests, professional background, and location. This required extensive research and testing to ensure accurate and meaningful matches.
+
+### Struggles and Lessons Learned
+One of the significant struggles was managing user authentication and profile management. Ensuring secure and efficient handling of user data was paramount. We also faced challenges with the integration of third-party services for job postings and notifications. These experiences taught me the importance of planning, testing, and iterating on features.
+
+### Future Iterations
+In the future, we envision adding more advanced features such as real-time chat between mentors and mentees, machine learning algorithms for improved job recommendations, and expanded networking event management. We also plan to enhance the UI/UX based on user feedback to make the platform more intuitive and user-friendly.
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -28,6 +40,7 @@ Gradconnect is a Django-based web application designed to connect graduates with
 - User authentication and profile management
 - Mentor-mentee matching system
 - Job postings and application tracking
+- User-friendly dashboard and profile editing
 
 ## Requirements
 - Python 3.x
