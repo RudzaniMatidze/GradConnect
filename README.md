@@ -33,8 +33,8 @@ In the future, we envision adding more advanced features such as real-time chat 
 - Visit [GradConnect](https://rudzee.pythonanywhere.com/accounts/login/)
 
 ## Collaborators
-- Rudzani Matidze - [Github](https://github.com/RudzaniMatidze) [Blog](https://medium.com/@rdzmatidze/working-on-gradconnect-my-first-portfolio-project-09248b79a37a ) [LinkedIn](https://za.linkedin.com/in/rudzani-matidze-b78431150)
-- Thomas Manhica - [Github](https://github.com/ManhicaThomas) [Blog]() [LinkedIn](https://www.linkedin.com/in/thomas-manhica-772679244)
+- Rudzani Matidze - [Github](https://github.com/RudzaniMatidze) | [Project Blog](https://medium.com/@rdzmatidze/working-on-gradconnect-my-first-portfolio-project-09248b79a37a ) | [LinkedIn](https://za.linkedin.com/in/rudzani-matidze-b78431150)
+- Thomas Manhica - [Github](https://github.com/ManhicaThomas) | [Project Blog]() | [LinkedIn](https://www.linkedin.com/in/thomas-manhica-772679244)
 
 ## Features
 - User authentication and profile management
