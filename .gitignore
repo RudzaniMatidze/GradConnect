@@ -1,0 +1,33 @@
+# Ignore compiled Python files
+*.pyc
+__pycache__/
+
+# Ignore environment-specific settings
+.env
+
+# Ignore Django migration files
+*/migrations/
+db.sqlite3
+
+# Ignore local development settings
+local_settings.py
+
+# Ignore IDE-specific files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore logs and other runtime data
+*.log
+*.pot
+*.po
+*.mo
+*.pyo
+*.bak
+
+# Ignore temporary files
+*.swp
+*~
+*.bak
+*.DS_Store
