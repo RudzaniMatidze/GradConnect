@@ -1,27 +1,33 @@
 # Gradconnect
 ![GradConnnect home page](images/home.png)
+
+## Introduction
 Gradconnect is a Django-based web application designed to connect graduates with mentors, job opportunities, and networking events. This project aims to provide a platform for graduates to build professional relationships and advance their careers.
 
 ## Table of Contents
+- [Introduction](#introduction)
+- [Deployment](#project-deployment)
 - [Colaborators](#Collaborators)
 - [Features](#features)
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Related Projects](#related-projects)
 - [Project Structure](#project-structure)
 - [Contributing](#contributing)
 - [License](#license)
 
+## Project Deployment
+- Visit [GradConnect](https://rudzee.pythonanywhere.com/accounts/login/)
+
 ## Collaborators
-- Rudzani Matidze - [Github](https://github.com/RudzaniMatidze)
-- Thomas Manhica - [Github](https://github.com/ManhicaThomas)
+- Rudzani Matidze - [Github](https://github.com/RudzaniMatidze) [Blog](https://medium.com/@rdzmatidze/working-on-gradconnect-my-first-portfolio-project-09248b79a37a ) [LinkedIn](https://za.linkedin.com/in/rudzani-matidze-b78431150)
+- Thomas Manhica - [Github](https://github.com/ManhicaThomas) [Blog]() [LinkedIn](https://www.linkedin.com/in/thomas-manhica-772679244)
 
 ## Features
 - User authentication and profile management
 - Mentor-mentee matching system
 - Job postings and application tracking
-- Event listings and registrations
-- User dashboards for managing connections and activities
 
 ## Requirements
 - Python 3.x
@@ -84,13 +90,17 @@ Gradconnect is a Django-based web application designed to connect graduates with
 Users can sign up by clicking the "Register" link on the homepage. After registration, they can log in to access their dashboard.
 
 - Profile Management
-Users can edit their profiles by navigating to the "Edit Profile" section. Here, they can update their personal information, upload a profile picture, and manage their visibility settings.
+Users can edit their profiles by navigating to the "Edit Profile" section. Here, they can update their personal information, and manage their visibility settings.
 
 - Mentor-Mentee Matching
 Graduates can search for mentors based on their interests and professional background. Mentors can approve or decline connection requests from graduates.
 
 - Job Postings
-Users can browse and apply for job postings. Employers can post job openings and review applications.
+Users can browse and apply for job postings. Users can track the job application status.
 
-- Event Listings
-Users can view and register for upcoming events related to their field of interest. Event organizers can create and manage event listings.
+## Related Projects
+django-crispy-forms: Third-party Django application for easier form styling.
+Bootstrap: Front-end framework used for responsive design.
+
+## Licence
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
