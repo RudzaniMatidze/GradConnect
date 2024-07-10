@@ -9,7 +9,8 @@ from django.contrib.auth import logout, login, authenticate
 from django.contrib import messages
 from datetime import datetime
 
-# Create your views here.
+
+# View to list all Jobs 
 def members(request):
     jobs = Member.objects.all().values()
 
@@ -35,6 +36,8 @@ def members(request):
     }
     return HttpResponse(template.render(context, request))
 
+
+# View to show details of a specific member
 def details(request, id):
     jobs = Member.objects.get(id=id)
     template = loader.get_template('details.html')
@@ -43,16 +46,21 @@ def details(request, id):
     }
     return HttpResponse(template.render(context, request))
 
+
+# Home page view
 def home(request):
     template = loader.get_template('home.html')
     return HttpResponse(template.render())
 
 
+# Profile view for logged-in users
 @login_required
 def profile(request):
     profile = Profile.objects.get(user=request.user)
     return render(request, 'profile.html', {'profile': profile})
 
+
+# View to edit profile for logged-in users
 @login_required
 def edit_profile(request):
     profile = Profile.objects.get(user=request.user)
@@ -69,26 +77,31 @@ def edit_profile(request):
     return render(request, 'edit_profile.html', context)
 
 
+# View to list all mentors
 def mentor_list(request):
     mentors = Mentor.objects.all()
     return render(request, 'mentor.html', {'mentors': mentors})
 
+
+# View to show details of a specific mentor
 def mentor_details(request, id):
     mentor = get_object_or_404(Mentor, id=id)
     return render(request, 'mentor_details.html', {'mentor': mentor})
 
+
+# View to connect with a mentor
 def connect_mentor(request, id):
     mentor = get_object_or_404(Mentor, id=id)
-    # Implement your connection logic here (e.g., send connection request)
-    # For example, you can add the current user to a list of mentees of the mentor
-
+   
     # Redirect back to the mentors list after connecting
     return redirect('mentor_list')
+
 
 # Logout view
 def logout_view(request):
     logout(request)
     return render(request, 'logout.html')
+
 
 # Login view
 def login_view(request):
@@ -105,6 +118,7 @@ def login_view(request):
         form = AuthenticationForm()
     return render(request, 'login.html', {'form': form})
 
+
 # Sign-up view
 def signup_view(request):
     if request.method == 'POST':
@@ -117,6 +131,8 @@ def signup_view(request):
         form = SignUpForm()
     return render(request, 'signup.html', {'form': form})
 
+
+# View to create profile for logged-in users
 @login_required
 def create_profile(request):
     if request.method == 'POST':
@@ -129,6 +145,3 @@ def create_profile(request):
     else:
         form = ProfileForm()
     return render(request, 'create_profile.html', {'form': form})
-
-def home_view(request):
-    return render(request, 'home.html')
