@@ -3,11 +3,13 @@ from .models import Profile
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 
+
+# Form for updating and creating Profile instances
 class ProfileForm(forms.ModelForm):
     class Meta:
         model = Profile
-        fields = ['profile_pic', 'name', 'email', 'qualifications', 'bio', 'skills', 'resume', 'portfolio_link', 'profile_link']
-        labels = {
+        fields = ['profile_pic', 'name', 'email', 'qualifications', 'bio', 'skills', 'resume', 'portfolio_link', 'profile_link']  # Fields to include in the form
+        labels = {  # Labels for the form fields
             'profile_pic': 'Profile Picture',
             'name': 'Full Name',
             'email': 'Email Address',
@@ -18,7 +20,7 @@ class ProfileForm(forms.ModelForm):
             'portfolio_link': 'Portfolio Link',
             'profile_link': 'Profile Link',
         }
-        widgets = {
+        widgets = {  # Widgets to customize the form fields
             'profile_pic': forms.ClearableFileInput(attrs={'class': 'form-control'}),
             'name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Enter your full name'}),
             'email': forms.EmailInput(attrs={'class': 'form-control', 'placeholder': 'Enter your email address'}),
@@ -32,16 +34,18 @@ class ProfileForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        for field_name, field in self.fields.items():
+        for field_name, field in self.fields.items():  # Apply 'form-control' class to all form fields
             field.widget.attrs['class'] = 'form-control'
 
     def clean_skills(self):
-        skills = self.cleaned_data.get('skills', '')
+        skills = self.cleaned_data.get('skills', '')  # Get the cleaned data for 'skills'
         if not skills:
             return skills
-        skills_list = [skill.strip() for skill in skills.split(',')]
-        return ', '.join(skills_list)
+        skills_list = [skill.strip() for skill in skills.split(',')]  # Split skills by comma and strip whitespace
+        return ', '.join(skills_list)  # Join skills back into a comma-separated string
 
+
+# Form for searching jobs
 class JobSearchForm(forms.Form):
     query = forms.CharField(
         label='Search',
@@ -53,14 +57,16 @@ class JobSearchForm(forms.Form):
         })
     )
 
+
+# Form for user sign-up
 class SignUpForm(UserCreationForm):
-    email = forms.EmailField(required=True, widget=forms.EmailInput(attrs={'class': 'form-control'}))
+    email = forms.EmailField(required=True, widget=forms.EmailInput(attrs={'class': 'form-control'}))  # Add email field with form control class
 
     class Meta:
         model = User
-        fields = ('username', 'email', 'password1', 'password2')
+        fields = ('username', 'email', 'password1', 'password2')  # Fields to include in the form
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        for field_name, field in self.fields.items():
+        for field_name, field in self.fields.items():  # Apply 'form-control' class to all form fields
             field.widget.attrs['class'] = 'form-control'
