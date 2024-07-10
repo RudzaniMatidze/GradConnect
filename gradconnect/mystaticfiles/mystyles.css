@@ -7,137 +7,138 @@
 
 /* Global styles */
 body {
-    font-family: 'Source Sans Pro', Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    padding: 20px;
+    font-family: 'Source Sans Pro', Arial, sans-serif; /* Set default font family */
+    line-height: 1.6; /* Set line height for better readability */
+    background-color: #f4f4f4; /* Set background color */
+    padding: 20px; /* Add padding to the body */
 }
 
 .container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 15px;
+    max-width: 960px; /* Set maximum width for content */
+    margin: 0 auto; /* Center align container */
+    padding: 0 15px; /* Add padding to the container */
 }
 
 a {
-    text-decoration: none;
-    color: #333;
+    text-decoration: none; /* Remove underline from links */
+    color: #333; /* Set default text color for links */
 }
 
 a:hover {
-    color: #000;
+    color: #000; /* Change text color on hover */
 }
 
 /* Header */
 #banner {
-    background-color: #2a2a2b;
-    color: #eff1eb;
-    text-align: center;
-    padding: 20px 0;
-    margin-bottom: 20px;
+    background-color: #2a2a2b; /* Background color for the banner */
+    color: #eff1eb; /* Text color for the banner */
+    text-align: center; /* Center-align text */
+    padding: 20px 0; /* Padding around content */
+    margin-bottom: 20px; /* Bottom margin */
 }
 
 #banner span {
-    font-size: 30px;
-    font-weight: bold;
+    font-size: 30px; /* Font size for span elements within #banner */
+    font-weight: bold; /* Bold font weight for span elements */
 }
 
 .topnav {
-    display: flex;
-    justify-content: flex-end;
-    background-color: #6747db;
-    overflow: hidden;
+    display: flex; /* Flex container for navigation */
+    justify-content: flex-end; /* Align items to the end (right side) */
+    background-color: #6747db; /* Background color for the navigation bar */
+    overflow: hidden; /* Hide overflow content */
 }
 
 .topnav a {
-    color: #f2f2f2;
-    text-align: center;
-    padding: 10px 16px;
-    text-decoration: none;
-    font-size: 17px;
+    color: #f2f2f2; /* Text color for navigation links */
+    text-align: center; /* Center-align text */
+    padding: 10px 16px; /* Padding around each link */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 17px; /* Font size for links */
 }
 
 .topnav a:hover {
-    background-color: #555;
-    color: #fff;
+    background-color: #555; /* Background color on hover */
+    color: #fff; /* Text color on hover */
 }
 
 .topnav a.active {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #4CAF50; /* Active link background color */
+    color: white; /* Active link text color */
 }
 
 /* Content */
 .content {
-    background-color: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    background-color: #fff; /* Background color for content */
+    padding: 20px; /* Padding around content */
+    margin-bottom: 20px; /* Bottom margin */
+    border: 1px solid #ddd; /* Border around content */
+    border-radius: 4px; /* Rounded corners */
 }
 
-/* profile and edit_profile */
+/* Profile and Edit Profile */
 .profile-container, .edit-profile-container {
-    background-color: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    background-color: #fff; /* Background color for profile and edit profile containers */
+    padding: 20px; /* Padding around content */
+    margin-bottom: 20px; /* Bottom margin */
+    border: 1px solid #ddd; /* Border around content */
+    border-radius: 4px; /* Rounded corners */
 }
 
 .profile-details {
-    margin-top: 20px;
+    margin-top: 20px; /* Top margin for profile details */
 }
 
 .profile-details img {
-    max-width: 200px;
-    height: auto;
-    border-radius: 4px;
-    margin-bottom: 10px;
+    max-width: 200px; /* Maximum width for profile images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 4px; /* Rounded corners for images */
+    margin-bottom: 10px; /* Bottom margin for images */
 }
 
 .edit-profile-container form {
-    max-width: 600px;
-    margin: 0 auto;
+    max-width: 600px; /* Maximum width for the edit profile form */
+    margin: 0 auto; /* Center-align the form */
 }
 
 .edit-profile-container form label {
-    display: block;
-    margin-bottom: 5px;
+    display: block; /* Display labels as block elements */
+    margin-bottom: 5px; /* Bottom margin for labels */
 }
 
 .edit-profile-container form input[type="text"],
 .edit-profile-container form input[type="email"],
 .edit-profile-container form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+    width: 100%; /* Full width input fields */
+    padding: 10px; /* Padding inside input fields */
+    margin-bottom: 10px; /* Bottom margin for input fields */
+    border: 1px solid #ccc; /* Border around input fields */
+    border-radius: 4px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
 .edit-profile-container form textarea {
-    resize: vertical;
-    min-height: 150px;
+    resize: vertical; /* Allow vertical resizing of textarea */
+    min-height: 150px; /* Minimum height for textarea */
 }
 
 .edit-profile-container form button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    background-color: #4CAF50; /* Background color for buttons */
+    color: white; /* Text color for buttons */
+    padding: 10px 20px; /* Padding inside buttons */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Cursor style on hover */
 }
 
 .edit-profile-container form button:hover {
-    background-color: #45a049;
+    background-color: #45a049; /* Background color on hover */
 }
 
 .space-above {
-    margin-top: 20px; /* Adjust the value as needed */
+    margin-top: 20px; /* Top margin adjustment as needed */
 }
+
 
 .edit-link {
     color: #ff0000; /* Change to the desired color */
@@ -150,59 +151,68 @@ a:hover {
 
 
 /* Mentors page styles */
+
+/* Heading styles */
 h1 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #333;
-    text-align: left
+    font-size: 2em; /* Large font size for headings */
+    margin-bottom: 20px; /* Bottom margin */
+    color: #333; /* Text color */
+    text-align: left; /* Left-align text */
 }
 
+/* List styles */
 ul {
-    list-style: none;
-    padding: 0;
+    list-style: none; /* Remove default list styles */
+    padding: 0; /* Remove padding */
 }
 
+/* List item styles */
 ul li {
-    background-color: #fff;
-    padding: 15px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background-color: #fff; /* Background color for list items */
+    padding: 15px; /* Padding around list items */
+    margin-bottom: 10px; /* Bottom margin */
+    border: 1px solid #ddd; /* Border around list items */
+    border-radius: 4px; /* Rounded corners */
+    display: flex; /* Flex container */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center-align items vertically */
 }
 
+/* Strong text inside list items */
 ul li strong {
-    font-size: 1.2em;
+    font-size: 1.2em; /* Larger font size */
 }
 
+/* Button styles inside list items */
 ul li a.btn {
-    padding: 5px 10px;
-    border-radius: 4px;
-    text-transform: uppercase;
-    font-size: 0.9em;
-    font-weight: bold;
-    margin-left: 10px;
+    padding: 5px 10px; /* Padding inside buttons */
+    border-radius: 4px; /* Rounded corners */
+    text-transform: uppercase; /* Uppercase text */
+    font-size: 0.9em; /* Font size */
+    font-weight: bold; /* Bold font weight */
+    margin-left: 10px; /* Left margin */
 }
 
+/* Secondary button style */
 ul li a.btn-secondary {
-    background-color: #6c757d;
-    color: #fff;
+    background-color: #6c757d; /* Background color */
+    color: #fff; /* Text color */
 }
 
 ul li a.btn-secondary:hover {
-    background-color: #5a6268;
+    background-color: #5a6268; /* Darker background color on hover */
 }
 
+/* Primary button style */
 ul li a.btn-primary {
-    background-color: #007bff;
-    color: #fff;
+    background-color: #007bff; /* Background color */
+    color: #fff; /* Text color */
 }
 
 ul li a.btn-primary:hover {
-    background-color: #0069d9;
+    background-color: #0069d9; /* Darker background color on hover */
 }
+
 
 /* Highlight link styles */
 .highlight-link {
@@ -219,130 +229,145 @@ ul li a.btn-primary:hover {
 }
 
 /* Job Listings styles */
+
+/* List styles for job listings */
 .job-list {
-    list-style: none;
-    padding: 0;
+    list-style: none; /* Remove default list styles */
+    padding: 0; /* Remove padding */
 }
 
+/* Individual job item styles */
 .job-item {
-    background-color: #f9f9f9;
-    padding: 15px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    background-color: #f9f9f9; /* Background color */
+    padding: 15px; /* Padding around job items */
+    margin-bottom: 10px; /* Bottom margin */
+    border: 1px solid #ddd; /* Border */
+    border-radius: 4px; /* Rounded corners */
+    display: flex; /* Flex container */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center-align items vertically */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Smooth background color transition */
 }
 
+/* Hover state for job items */
 .job-item:hover {
-    background-color: #f1f1f1;
+    background-color: #f1f1f1; /* Darker background color on hover */
 }
 
+/* View details button styles */
 .btn-view-details {
-    background-color: #007bff;
-    color: #fff;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 4px;
-    text-transform: uppercase;
-    font-size: 0.9em;
-    font-weight: bold;
-    cursor: pointer;
-    text-decoration: none;
+    background-color: #007bff; /* Background color */
+    color: #fff; /* Text color */
+    padding: 5px 10px; /* Padding inside button */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    text-transform: uppercase; /* Uppercase text */
+    font-size: 0.9em; /* Font size */
+    font-weight: bold; /* Bold font weight */
+    cursor: pointer; /* Pointer cursor */
+    text-decoration: none; /* No underline */
 }
 
+/* Hover state for view details button */
 .btn-view-details:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Darker background color on hover */
 }
 
 /* Application Progress styles */
+
+/* Container styles for application progress */
 .application-progress {
-    background-color: #e9ecef;
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    background-color: #e9ecef; /* Background color */
+    padding: 15px; /* Padding inside container */
+    margin-bottom: 20px; /* Bottom margin */
+    border: 1px solid #ddd; /* Border */
+    border-radius: 4px; /* Rounded corners */
 }
 
+/* Heading styles within application progress */
 .application-progress h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #343a40;
+    font-size: 1.5em; /* Large font size for heading */
+    margin-bottom: 10px; /* Bottom margin */
+    color: #343a40; /* Text color */
 }
 
+/* List styles within application progress */
 .application-progress ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    list-style: none; /* Remove default list styles */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex; /* Flex container */
+    flex-wrap: wrap; /* Wrap items */
+    gap: 10px; /* Gap between items */
 }
 
+/* List item styles within application progress */
 .application-progress ul li {
-    padding: 5px 10px;
-    font-size: 1em;
-    color: #192b3d;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    padding: 5px 10px; /* Padding inside list items */
+    font-size: 1em; /* Font size */
+    color: #192b3d; /* Text color */
+    background-color: #fff; /* Background color */
+    border: 1px solid #ddd; /* Border */
+    border-radius: 4px; /* Rounded corners */
 }
- 
-/* mystyles.css for logout*/
+
+/* Styles for logout container */
 .logout-container {
-    background-color: #fff;
-    padding: 20px;
-    margin: 20px auto;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    max-width: 600px;
-    text-align: center;
+    background-color: #fff; /* Background color */
+    padding: 20px; /* Padding inside container */
+    margin: 20px auto; /* Margin */
+    border: 1px solid #ddd; /* Border */
+    border-radius: 4px; /* Rounded corners */
+    max-width: 600px; /* Maximum width */
+    text-align: center; /* Center-align text */
 }
 
+/* Heading styles within logout container */
 .logout-container h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #333;
+    font-size: 2em; /* Large font size for heading */
+    margin-bottom: 20px; /* Bottom margin */
+    color: #333; /* Text color */
 }
 
+/* Paragraph styles within logout container */
 .logout-container p {
-    font-size: 1.2em;
-    margin-bottom: 10px;
+    font-size: 1.2em; /* Font size */
+    margin-bottom: 10px; /* Bottom margin */
 }
 
+/* Link styles within logout container */
 .logout-container a {
-    color: #007bff;
-    text-decoration: none;
+    color: #007bff; /* Link color */
+    text-decoration: none; /* No underline */
 }
 
+/* Hover state for links within logout container */
 .logout-container a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Underline on hover */
 }
 
-/* Footer */
+/* Footer styles */
 .footer {
-    text-align: center;
-    padding: 10px 0;
-    background-color: #7c7d80;
-    color: #fff;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    text-align: center; /* Center-align text */
+    padding: 10px 0; /* Padding */
+    background-color: #7c7d80; /* Background color */
+    color: #fff; /* Text color */
+    position: fixed; /* Fixed position */
+    bottom: 0; /* Stick to the bottom */
+    width: 100%; /* Full width */
 }
 
 /* Success message styles */
 .success {
-    color: green;
-    margin-bottom: 15px;
+    color: green; /* Green text color */
+    margin-bottom: 15px; /* Bottom margin */
 }
 
 /* Error message styles */
 .error {
-    color: red;
-    margin-bottom: 15px;
+    color: red; /* Red text color */
+    margin-bottom: 15px; /* Bottom margin */
 }
 
 
@@ -382,5 +407,3 @@ ul li a.btn-primary:hover {
         height: auto; /* Maintain aspect ratio */
         display: block; /* Remove any inline spacing */
     }
-
-
